@@ -19,7 +19,7 @@ btn.addEventListener("click" , () => {
 
 function displayShortURL(shortURLObj)
 {
-    shortURL.value = shortURLObj["shortURL"];
+    shortURL.value = "http://127.0.0.1:8000/" +shortURLObj["shortURL"];
     buttonDiv.style.display = "flex";
 }
 

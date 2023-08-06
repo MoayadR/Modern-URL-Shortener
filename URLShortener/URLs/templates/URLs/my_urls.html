@@ -21,15 +21,15 @@
           </div>
           <div class="form-group">
             <label for="shortURL">Short URL</label>
-            <input type="text" class="form-control" id="shortURL" name="shortURL" placeholder="Short URL" readonly value={{object.short_url}}>
+            <input type="text" class="form-control" id="shortURL" name="shortURL" placeholder="Short URL" readonly value="http://127.0.0.1:8000/{{object.short_url}}">
           </div>
           <div class="form-group">
             <label for="visits">Visits</label>
             <input type="text" class="form-control" value={{object.visits}} readonly>
           </div>
           <div class="shortURL-buttons">
-            <button type="button" class="btn btn-dark short-buttons" value="{{object.short_url}}" onclick="visits(this)" >Visit</button>
-            <button type="button" class="btn btn-primary short-buttons" value="{{object.short_url}}" onclick="copy(this)">Copy</button>
+            <button type="button" class="btn btn-dark short-buttons" value="http://127.0.0.1:8000/{{object.short_url}}" onclick="visits(this)" >Visit</button>
+            <button type="button" class="btn btn-primary short-buttons" value="http://127.0.0.1:8000/{{object.short_url}}" onclick="copy(this)">Copy</button>
             <button type="button" value="{{object.id}}" class="btn btn-danger short-buttons" onclick="deleteURL(this)">delete</button>
           </div>
     </div>

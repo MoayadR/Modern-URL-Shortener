@@ -26,7 +26,7 @@ def generateShortURL():
         hashed = str(base62Encryption(counter.counter))
         counter.counter +=1
         counter.save() 
-        return 'http://127.0.0.1:8000/'+hashed+'/'
+        return hashed
     return None
 
 # Create your views here.

@@ -30,7 +30,7 @@
           <div class="shortURL-buttons">
             <button type="button" class="btn btn-dark short-buttons" value="{{object.short_url}}" onclick="visits(this)" >Visit</button>
             <button type="button" class="btn btn-primary short-buttons" value="{{object.short_url}}" onclick="copy(this)">Copy</button>
-            <a href="#"><button type="button" class="btn btn-danger short-buttons">delete</button></a>
+            <button type="button" value="{{object.id}}" class="btn btn-danger short-buttons" onclick="deleteURL(this)">delete</button>
           </div>
     </div>
 

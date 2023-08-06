@@ -1,0 +1,28 @@
+#urls-containter{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.url-containter{
+    width: 25%;
+    margin: 2%;
+    border: 2px #212529 dotted;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.url-containter div{
+    margin: 2%;
+}
+
+.shortURL-buttons{
+    text-align: center;
+}
+
+
+.short-buttons{
+    margin-left: 1%;
+    border-radius: 25px;
+    width: 30%;
+}

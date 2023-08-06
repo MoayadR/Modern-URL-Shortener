@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} My URLs {% endblock %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'my_urls/my_urls.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div id="urls-containter">
+    
+    {% for object in objects %}
+
+    <div class="url-containter">
+        <div class="form-group">
+            <label for="longURL">Long URL</label>
+            <input type="url" class="form-control" name="longURL" id="longURL" aria-describedby="emailHelp" placeholder="Enter Long URL" readonly value={{object.long_url}}>
+          </div>
+          <div class="form-group">
+            <label for="shortURL">Short URL</label>
+            <input type="text" class="form-control" id="shortURL" name="shortURL" placeholder="Short URL" readonly value={{object.short_url}}>
+          </div>
+          <div class="form-group">
+            <label for="visits">Visits</label>
+            <input type="text" class="form-control" value={{object.visits}} readonly>
+          </div>
+          <div class="shortURL-buttons">
+            <button type="button" class="btn btn-dark short-buttons" value="{{object.short_url}}" onclick="visits(this)" >Visit</button>
+            <button type="button" class="btn btn-primary short-buttons" value="{{object.short_url}}" onclick="copy(this)">Copy</button>
+            <a href="#"><button type="button" class="btn btn-danger short-buttons">delete</button></a>
+          </div>
+    </div>
+
+    {% endfor %}
+
+
+    
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+<script src="{% static 'my_urls/my_urls.js' %}"></script>
+{% endblock %}

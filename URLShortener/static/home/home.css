@@ -1,0 +1,40 @@
+#main{
+    display: flex;
+    margin: 8% 5% 0;
+    justify-content: space-between;
+}
+
+#form-div{
+    flex: 2;
+    border: 2px dotted;
+    overflow: hidden;
+}
+
+#content{
+    flex: 1;
+    width: 50%;
+    margin-left: 1%;
+}
+
+
+#submit-btn{
+    margin: 2% 0 0;
+    width: 15%;
+    border-radius: 25px;
+}
+
+#submit-btn:hover{
+    background-color: #007bff ;
+    transition: 0.7s;
+}
+
+#submit-container{
+    width: 100%;
+    text-align: center;
+}
+
+
+form{
+    width: 90%;
+    margin: 5% auto;
+}

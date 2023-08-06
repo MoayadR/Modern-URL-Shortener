@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'home/home.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+<div id="main">
+    <div id="form-div">
+        <form action="" method="dialog" id="form">
+                <div class="form-group">
+                  <label for="longURL">Long URL</label>
+                  <input type="url" class="form-control" name="longURL" id="longURL" aria-describedby="emailHelp" placeholder="Enter Long URL">
+                </div>
+                <div class="form-group">
+                  <label for="shortURL">Short URL</label>
+                  <input type="text" class="form-control" id="shortURL" placeholder="Short URL" readonly>
+                </div>
+                <div id="submit-container">
+                    <button type="submit" id="submit-btn" class="btn btn-dark">Generate</button>
+                </div>
+        </form>
+    </div>
+
+    <div id="content">
+        <h1>URL Shortener</h1>
+        <p>A URL shortener is a service that takes a long URL and creates a shorter, more manageable version of it. This can be useful for a variety of purposes</p>
+        <p>URL shorteners work by creating a redirect that takes users to the original URL. When someone clicks on a shortened link, they are first taken to the shortener's website, which then redirects them to the original destination.</p>
+    </div>
+
+    
+
+</div>
+
+{% endblock %}
+
+
+
+
+{% block scripts %}
+<link rel="stylesheet" href="{% static 'home/home.js' %}">
+{% endblock %}

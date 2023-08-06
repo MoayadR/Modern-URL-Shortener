@@ -34,7 +34,18 @@
 }
 
 
-form{
+#form{
     width: 90%;
     margin: 5% auto;
+}
+
+
+#shortURL-buttons{
+    display: none;
+    justify-content: space-evenly;
+}
+.short-buttons{
+    margin: 1%;
+    border-radius: 25px;
+    flex: 1;
 }

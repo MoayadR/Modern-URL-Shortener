@@ -13,19 +13,23 @@
 
 <div id="main">
     <div id="form-div">
-        <form action="" method="dialog" id="form">
+      <div id="form">
                 <div class="form-group">
                   <label for="longURL">Long URL</label>
                   <input type="url" class="form-control" name="longURL" id="longURL" aria-describedby="emailHelp" placeholder="Enter Long URL">
                 </div>
                 <div class="form-group">
                   <label for="shortURL">Short URL</label>
-                  <input type="text" class="form-control" id="shortURL" placeholder="Short URL" readonly>
+                  <input type="text" class="form-control" id="shortURL" name="shortURL" placeholder="Short URL" readonly>
+                </div>
+                <div id="shortURL-buttons">
+                  <button type="button" class="btn btn-dark short-buttons" id="visit">Visit</button>
+                  <button type="button" class="btn btn-primary short-buttons" id="copy">Copy</button>
                 </div>
                 <div id="submit-container">
-                    <button type="submit" id="submit-btn" class="btn btn-dark">Generate</button>
+                    <button type="button" id="submit-btn" class="btn btn-dark" >Generate</button>
                 </div>
-        </form>
+              </div>
     </div>
 
     <div id="content">
@@ -44,5 +48,5 @@
 
 
 {% block scripts %}
-<link rel="stylesheet" href="{% static 'home/home.js' %}">
+<script src="{% static 'home/home.js' %}"></script>
 {% endblock %}

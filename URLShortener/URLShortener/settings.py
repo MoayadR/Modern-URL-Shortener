@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'Access.apps.AccessConfig',
     'crispy_forms',
     "crispy_bootstrap4",
+    'api.apps.ApiConfig',
 ]
 
 MIDDLEWARE = [

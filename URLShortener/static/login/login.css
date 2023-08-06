@@ -1,9 +1,13 @@
 #form-div{
     border: 2px solid #212529;
-    width: 70%;
+    width: 60%;
     margin: 5% auto;
     border-radius: 15px;
     overflow: hidden;
+}
+#submit-container{
+    width: 100%;
+    text-align: center;
 }
 
 #submit-btn{
@@ -17,12 +21,6 @@
     transition: 0.7s;
 }
 
-#submit-container{
-    width: 100%;
-    text-align: center;
-}
-
 form{
     margin: 20px 20px;
 }
-

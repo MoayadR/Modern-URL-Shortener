@@ -1,0 +1,22 @@
+#form-div{
+    border: 2px solid #212529;
+    width: 70%;
+    margin: 5% auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#submit-btn{
+    margin: 2% 0;
+    width: 10%;
+    border-radius: 25px;
+}
+
+#submit-container{
+    width: 100%;
+    text-align: center;
+}
+
+form{
+    margin: 20px 20px;
+}

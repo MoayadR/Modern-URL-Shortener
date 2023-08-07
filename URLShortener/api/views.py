@@ -35,8 +35,8 @@ def createShortURL(request):
     if request.method == "POST":
         bodyDict = json.loads(request.body)
         if shortURLExist(request.user , bodyDict["longURL"]):
-            shortURL = short_url.objects.get(user = request.user , long_url = bodyDict["longURL"])
-            shortURL = shortURL.short_url
+            object = short_url.objects.get(user = request.user , long_url = bodyDict["longURL"])
+            shortURL = object.short_url
         else:
             shortURL = generateShortURL()
             short_url.objects.create(user = request.user , long_url = bodyDict["longURL"] , short_url = shortURL)

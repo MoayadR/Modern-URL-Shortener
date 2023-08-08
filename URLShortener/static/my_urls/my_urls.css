@@ -31,3 +31,13 @@
     display: flex;
     justify-content: center;
 }
+
+#heading-div{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    line-height: 48px;
+    letter-spacing: -2px;
+}

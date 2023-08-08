@@ -16,6 +16,11 @@
 
     <form action="" method="POST">
         {% csrf_token %}
+
+        <div class="form-group" id="heading-div">
+            <h1>Register</h1>
+          </div>
+
         {{form | crispy}}
 
         <div class="form-group" id="showPassword-div">

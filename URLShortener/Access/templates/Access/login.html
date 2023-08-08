@@ -6,6 +6,8 @@
 
 {% block links %}
 <link rel="stylesheet" href="{% static 'login/login.css'%}">
+<link rel="stylesheet" href="{% static 'nav/nav.css' %}">
+<link rel="stylesheet" href="{% static 'showPassword/showPassword.css' %}">
 {% endblock %}
 
 
@@ -22,6 +24,10 @@
               <label for="password">Password</label>
               <input type="password" class="form-control" id="password" name="password" placeholder="Password">
             </div>
+            <div class="form-group" id="showPassword-div">
+              <label for="showPassword">Show Password:</label>
+              <input type="checkbox" id="showPassword">
+            </div>
             <div id="submit-container">
             <button id="submit-btn" type="submit" class="btn btn-dark">Login</button>
             </div>
@@ -37,4 +43,5 @@
 
 {% block scripts %}
 <script src="{% static 'login/login.js'%}"></script>
+<script src="{% static 'showPassword/showPassword.js'%}"></script>
 {% endblock %}

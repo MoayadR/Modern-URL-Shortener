@@ -3,6 +3,7 @@ from django.forms import forms
 from datetime import date
 from uuid import uuid4
 from django.contrib.auth.models import User
+import PIL
 
 # Create your models here.
 class short_url(models.Model):
@@ -12,6 +13,7 @@ class short_url(models.Model):
     created_date = models.DateField(default=date.today)
     user = models.ForeignKey(User , on_delete=models.CASCADE)
     visits = models.PositiveIntegerField(default=0, blank=True , null = False)
+    qrcode = models.ImageField(upload_to='qrcodes/' , blank=True)
 
     def __str__(self):
         return str(self.id)

@@ -1,7 +1,8 @@
-from django.shortcuts import render
 from django.http import JsonResponse 
 from django.views.decorators.csrf import csrf_exempt
 from URLs.models import server_counter , short_url
+from django.core.files.images import ImageFile
+import qrcode
 import json
 
 def base62Encryption(number : int):
@@ -39,6 +40,13 @@ def createShortURL(request):
             shortURL = object.short_url
         else:
             shortURL = generateShortURL()
-            short_url.objects.create(user = request.user , long_url = bodyDict["longURL"] , short_url = shortURL)
-        print(shortURL)
+
+            # qrCode  Generation
+            img = qrcode.make('http://127.0.0.1:8000/' + shortURL)
+            img.save(f'media/generatedQrCodes/{shortURL}.png')
+            
+            object = short_url.objects.create(user = request.user , long_url = bodyDict["longURL"] , short_url = shortURL)
+            object.qrcode = ImageFile(open(f'media/generatedQrCodes/{shortURL}.png', "rb") , f'{shortURL}.png')     
+            object.save()
+
         return JsonResponse({'shortURL' : shortURL})

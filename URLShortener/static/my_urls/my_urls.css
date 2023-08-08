@@ -26,3 +26,8 @@
     border-radius: 25px;
     width: 30%;
 }
+
+#qrcode-div{
+    display: flex;
+    justify-content: center;
+}

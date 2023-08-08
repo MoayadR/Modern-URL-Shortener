@@ -12,7 +12,7 @@ function deleteURL(element)
     let statusBool = window.confirm("Are your sure you want to delete this URL?");
     if (statusBool)
     {
-        window.open("http://127.0.0.1:8000/url/delete/" +element.value);
+        window.open("http://127.0.0.1:8000/url/delete/" +element.value , '_self');
     }
 
 }
